@@ -1,0 +1,21 @@
+<h1>Hola Bienvenido Soy Diego Pabon!</h1>
+<p>Desarrollador FullStack.:</p>
+
+<p>Estas son las 5 CryptoCurrencys con su valor en USD:</p>
+
+<p *ngIf="!currencies"><em>Cargando...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="currencies">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Precio</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let currency of currencies ">
+    <td>{{ currency.name }}</td>
+    <td>{{ currency.value }}</td>
+  </tr>
+  </tbody>
+</table>
